@@ -8,8 +8,12 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'inherited_resources', :source => 'http://gemcutter.org'
+  config.gem 'formtastic'
+  config.gem 'searchlogic'
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
 
+  config.middleware.use "ResponseTimer", "Load Time"
+ 
   config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"
 end

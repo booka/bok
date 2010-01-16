@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20091206184607) do
   create_table "boks", :force => true do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "type"
+    t.string   "bok_type"
     t.string   "content_type"
     t.string   "properties"
     t.text     "body"
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20091206184607) do
     t.datetime "updated_at"
   end
 
+  add_index "boks", ["bok_type"], :name => "index_boks_on_bok_type"
   add_index "boks", ["content_type"], :name => "index_boks_on_content_type"
   add_index "boks", ["title"], :name => "index_boks_on_title"
-  add_index "boks", ["type"], :name => "index_boks_on_type"
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @user_session.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @user_session.password %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%=h @user_session.token %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_session_path(@user_session) %> |
+<%= link_to 'Back', user_sessions_path %>

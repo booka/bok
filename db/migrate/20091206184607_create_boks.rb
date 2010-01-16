@@ -3,7 +3,7 @@ class CreateBoks < ActiveRecord::Migration
     create_table :boks do |t|
       t.string :title
       t.string :description
-      t.string :type
+      t.string :bok_type
       t.string :content_type
       t.string :properties, :length => 4096
       t.text :body
@@ -17,7 +17,7 @@ class CreateBoks < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :boks, :type
+    add_index :boks, :bok_type
     add_index :boks, :title
     add_index :boks, :content_type
 

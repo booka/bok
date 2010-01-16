@@ -1,0 +1,23 @@
+
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Title</td>
+      <td>Type</td>
+      <td>Parent</td>
+      <td>User name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @boks.each do |bok| %>
+      <tr>
+        <td><%= bok.id %></td>
+        <td><%= bok.title %></td>
+        <td><%= bok.bok_type %></td>
+        <td><%= bok.parent.title if bok.parent%></td>
+        <td><%= bok.user_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
