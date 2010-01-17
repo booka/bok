@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
   protect_from_forgery :only => []
 
   def create
-    @user_session = UserSession.new
+    @user_session = UserSession.new(params[:user])
     @user_session.token = form_authenticity_token
     create!
   end

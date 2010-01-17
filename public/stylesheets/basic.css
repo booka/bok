@@ -1,0 +1,14 @@
+
+#page {
+    width: 960px; margin: 2em auto; background-color: white; border: 1px solid gray; padding: 1em;
+}
+
+table {
+    width: 100%;
+    background-color: #efefef;
+    margin: 1em 0;
+}
+thead tr td{
+    border-bottom: 1px solid gray;
+}
+tr {padding: 0.2em;}
