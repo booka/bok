@@ -1,7 +1,6 @@
-class ResponseTimer
-  def initialize(app, message = "Response Time")
+class RequestLogger
+  def initialize(app)
     @app = app
-    @message = message
   end
 
   def call(env)
