@@ -31,3 +31,16 @@ a.action:hover {
 	text-decoration: underline;
 	color: black;
 }
+
+.hover-blue {
+	-moz-border-radius: 1em;
+	color: blue;
+}
+
+a.hover-blue:hover {
+	background-color: #E1EBEF; /** azul claro **/
+}
+
+a.hover-gray:hover {
+	background-color: #EFEFEF;
+}

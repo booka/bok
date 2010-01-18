@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'inherited_resources', :source => 'http://gemcutter.org'
   config.gem 'formtastic'
   config.gem 'searchlogic'
+
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
 
