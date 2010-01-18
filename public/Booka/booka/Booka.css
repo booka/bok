@@ -12,8 +12,10 @@ a:hover {
 	overflow: hidden;
 }
 
-.active {
+.editable-active {
 	background-color: #E1EBEF; /** azul claro **/
+	border-top: 1px solid #00AEEF;
+	border-bottom: 1px solid #00AEEF;
 }
 
 a.action {
@@ -25,6 +27,7 @@ a.action {
 	color: white;
 	font-family: sans;
 	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
 }
 
 a.action:hover {
@@ -34,6 +37,7 @@ a.action:hover {
 
 .hover-blue {
 	-moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
 	color: blue;
 }
 
