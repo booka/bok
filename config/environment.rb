@@ -14,10 +14,8 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
 
-  if Rails.env == 'development'
     puts "Setup request logger."
     config.middleware.use "RequestLogger"
-  end
  
   config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"
 end
