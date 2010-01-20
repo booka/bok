@@ -1,0 +1,67 @@
+@import "variables.less";
+
+.Expansible {
+    background-color: @grisclaro;
+    border-top: 1px solid @azul;
+    border-bottom: 1px solid @azul;
+}
+div.Expansible:hover {background-color: @azulclaro;}
+
+.Form {
+    font-family: sans;
+    background-color: @azul;
+    padding: 0.5em 0 0 0;
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;
+    font-size: 75%;
+}
+
+.Form .FormRow {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 3px 1em;
+}
+.Form .FormRow.Actions {
+    position: relative;
+    background-color: @grisclaro;
+    padding: 1em 1em 1em 0;
+    margin: 3px 0 0 0;
+}
+
+.Form .FormRow .Action {
+    margin: 0 1em 0 0;
+    .action;
+}
+
+.Form .FormLabel {
+    display: block;
+    color: white;
+}
+
+textarea {
+    border: 1px solid white;
+    padding: 2px;
+}
+
+
+.Form input[type=text], .Form .TextArea {
+    display: block;
+    border: 1px solid white;
+    padding: 2px;
+    color: black;
+    width: 15em;
+}
+
+.Form .Action {
+    display: block;
+    float: left;
+    cursor: pointer;
+    padding: 0.2em 1em;
+    margin: 1px 0 0 3px;
+    color: white;
+    background-color: azul;
+    color: white;
+    -moz-border-radius: 0.5em;
+}

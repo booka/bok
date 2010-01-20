@@ -1,0 +1,43 @@
+
+@import "reset-min.css";
+@import "variables";
+ 
+.bk-Navigation {
+    width: 100%; overflow: hidden;
+    background-color: white; 
+}
+.bk-Navigation .bk-Anchor{ opacity: 0.6; border-bottom: 3px solid white;}
+.bk-Navigation div.bk-Anchor:hover { opacity: 1; border-bottom: 3px solid efefef;}
+   
+.bk-ProjectList {
+    background-color: @azul;
+} 
+ 
+.bk-ProjectList .Controls {}
+.bk-ProjectList .Controls .Action {.action;}
+
+.bk-ProjectList .Info h1 {
+    display: block; font-size: 1.3em;
+    text-align: center;
+    color: white;
+    margin: 0 0 5px 0;
+    border: 0;
+} 
+
+.bk-ProjectList .Project {
+    display: block;
+    text-align: center;
+    background-color: white;
+    padding: 1em 5%;
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 0.5em;
+    -moz-border-radius: 1em;
+    cursor: pointer;
+    color: @azul;
+}
+.bk-ProjectList a.Project:hover {color: black; background-color: @azulclaro;}
+
+@import "archives";
+@import "document";
+@import "forms";
