@@ -7,4 +7,11 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   layout 'basic'
+
+  protected
+  def render_json(bok, children)
+    bok = {:bok => nil} if bok.nil?
+    children = [] if children.nil?
+    render :json => [bok, {:boks => children}]
+  end
 end

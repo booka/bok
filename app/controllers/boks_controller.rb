@@ -4,7 +4,15 @@ class BoksController < ApplicationController
 
   def index
     @boks = Bok.search(params[:search]).all
-    index!
+    index! do |format|
+      format.json { render_json(nil, @boks)}
+    end
+  end
+
+  def show
+    show! do |format|
+      format.json { render_json(@bok, @bok.children)}
+    end
   end
 
 

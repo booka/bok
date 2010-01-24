@@ -6,9 +6,9 @@ class BokChildrenController < ApplicationController
 
   def index
     @bok = Bok.find(params[:bok_id])
-    @boks = Bok.search(params[:search]).all
+    @boks = @bok.children.search(params[:search]).all
     index! do |format|
-      format.json { render :json => {:bok => @bok, :children => @boks} }
+      format.json { render_json(@bok, @boks) }
     end
   end
 end
