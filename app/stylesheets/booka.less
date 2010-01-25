@@ -1,13 +1,17 @@
-
-@import "reset-min.css";
-@import "variables";
  
+@import "reset-min.css";
+@import "variables";   
+ 
+html {
+    font-size: 90%;
+}
+
 .bk-Navigation {
     width: 100%; overflow: hidden;
     background-color: white; 
 }
-.bk-Navigation .bk-Anchor{ opacity: 0.6; border-bottom: 3px solid white;}
-.bk-Navigation div.bk-Anchor:hover { opacity: 1; border-bottom: 3px solid efefef;}
+.bk-Navigation .bk-Anchor{ opacity: 0.8; border-bottom: 3px solid white;}
+.bk-Navigation a.bk-Anchor:hover { opacity: 1; border-bottom: 5px solid #efefef; }
    
 .bk-ProjectList {
     background-color: @azul;
@@ -21,9 +25,10 @@
     text-align: center;
     color: white;
     margin: 0 0 5px 0;
-    border: 0;
-} 
+    border: 0; 
+}
 
+   
 .bk-ProjectList .Project {
     display: block;
     text-align: center;
@@ -33,6 +38,7 @@
     margin-left: 5%;
     margin-bottom: 0.5em;
     -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
     cursor: pointer;
     color: @azul;
 }
@@ -40,4 +46,5 @@
 
 @import "archives";
 @import "document";
+@import "calendar";
 @import "forms";
