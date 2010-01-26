@@ -1,0 +1,10 @@
+<% semantic_form_for @bok do |form| %>
+  <%= form.inputs %>
+<fieldset>
+  <ol><li>
+      <label>Format</label>
+      <%= select_tag "format", options_for_select([ "html", "json", "js" ], "html") %>
+    </li></ol>
+</fieldset>
+  <%= form.buttons %>
+<% end %>

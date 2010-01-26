@@ -10,8 +10,16 @@ class BoksController < ApplicationController
   end
 
   def show
-    @bok = Bok.find(params[:bok_id])
+    @bok = Bok.find(params[:id])
+    @boks = @bok.children
     show! do |format|
+      format.json { render_json(@bok, @boks)}
+    end
+  end
+
+  def update
+    request.format = params[:format] unless params[:format].empty?
+    update! do |format|
       format.json { render_json(@bok, @bok.children)}
     end
   end

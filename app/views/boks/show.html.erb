@@ -1,0 +1,9 @@
+<%= title('Edit bok') %>
+
+<div class="actions">
+  <%= link_to 'Edit', edit_bok_path(@bok) %>
+</div>
+<p><label>Title: </label><%= @bok.title %></p>
+<p><label>Type: </label><%= @bok.bok_type %></p>
+<p><label>Description: </label><%= @bok.description %></p>
+<%= render 'boks' %>
