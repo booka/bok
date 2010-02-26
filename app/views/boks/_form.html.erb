@@ -1,4 +1,5 @@
 <% semantic_form_for @bok do |form| %>
+  <%= form.buttons %>
   <%= form.inputs %>
 <fieldset>
   <ol><li>
@@ -6,5 +7,4 @@
       <%= select_tag "format", options_for_select([ "html", "json", "js" ], "html") %>
     </li></ol>
 </fieldset>
-  <%= form.buttons %>
 <% end %>

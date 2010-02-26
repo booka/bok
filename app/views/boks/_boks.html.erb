@@ -6,6 +6,7 @@
       <td>Type</td>
       <td>Parent</td>
       <td>User name</td>
+      <td>Position</td>
       <td></td>
     </tr>
   </thead>
@@ -17,7 +18,11 @@
         <td><%= bok.bok_type %></td>
         <td><%= bok.parent.title if bok.parent%></td>
         <td><%= bok.user_name %></td>
-        <td><%= link_to 'Edit', edit_bok_path(bok) %></td>
+        <td><%= bok.position %></td>
+        <td>
+          <%= link_to 'Edit', edit_bok_path(bok) %>
+          <%= link_to 'Delete', bok_path(bok), :method => :delete %>
+        </td>
       </tr>
     <% end %>
   </tbody>

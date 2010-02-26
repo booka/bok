@@ -6,7 +6,16 @@
 @grisclaro: #efefef;
 
 @serif: "Garamond", serif;
-@sans: sans-serif;
+@sans: "Helvetica","arial","freesans","clean",sans-serif;
+@font-small: 80%;
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline;}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
 
 .action {
     cursor: pointer;
@@ -15,9 +24,12 @@
     padding: 0.2em 1em;
     margin: 1px 0 0 3px;
     color: white;
-    background-color: #00AEEF; /* azul */
-    color: white;
-    font-family: sans;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
+    background-color: @azul;
+    font-family: @sans;
+}
+
+div.action:hover {
+    color: @azulclaro;
 }

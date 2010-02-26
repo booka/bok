@@ -30,20 +30,72 @@
     font-style: italic;
 }
 
-.bk-Document .bk-Slot {
-    width: 100%; overflow: hidden;
-    font-size: 75%;
-    font-family: @sans;
-    padding: 0 3px; text-align: center;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    background-color: @azulclaro;
+
+
+.bk-ContentTypeList {
+    width: 100%;
+    overflow: hidden;
 }
 
-.bk-Slot .gwt-Anchor {
+.bk-ContentTypeList .contentType {
     .action;
 }
 
-.bk-Document div.bk-Slot:hover {border-top: 1px solid @azul; border-bottom: 1px solid @azul;}
+.bk-DocInfoViewer {
+    margin-bottom: 1em;
+}
 
-JODER {}
+
+/** CLIPS **/
+.bk-Clip {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 3px 0;
+    padding: 2px 0;
+}
+
+div.bk-Clip:hover, .bk-Clip.active {
+    border-top: 1px solid @azul;
+    border-bottom: 1px solid @azul;
+}
+div.bk-Clip.editor:hover {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.bk-ClipActions {
+    margin-top: 2px;
+    padding: 3px 0;
+    font-size: @font-small;
+    background-color: @azulclaro;
+    .container;
+}
+
+.bk-ClipActions a {
+    .action;
+}
+
+.bk-Slot {
+    width: 100%;
+    margin: -2px 0;
+    height: 3px;
+    background-color: @azulclaro;
+}
+
+
+.bk-ClipEditor {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: @azulclaro;
+    border: 1px solid @azul;
+}
+
+.bk-ClipEditor .actions {
+    padding-top: 10px;
+    font-size: @font-small;
+    .container;
+}
+
+.bk-ClipEditor .actions a {
+    .action;
+}

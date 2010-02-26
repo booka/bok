@@ -9,15 +9,17 @@ class RequestLogger
 
   def _call(env)
     @start = Time.now
-    query(env)
+    log = true if env['QUERY_STRING'].match /.*\.json$/
+    query(env, log)
     @status, @headers, @response = @app.call(env)
     @stop = Time.now
-    response(@start, @status, @headers, @response)
+    response(@start, @status, @headers, @response) if log
     [@status, @headers, @response]
   end
 
-  def query(env)
-    puts "================================================================================"
+  def query(env, log)
+    puts "#{log} ================================================================================"
+    puts env['PATH_INFO']
     puts "QUERY STRING:"
     puts env['QUERY_STRING']
   end
