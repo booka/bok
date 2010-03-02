@@ -15,6 +15,6 @@ class UserSession < Authlogic::Session::Base
 
 
   def to_json
-    [:name => name, :user_id => user_id, :email => email]
+    {:user_name => name, :user_id => user_id, :user_email => email, :token => token}
   end
 end

@@ -12,6 +12,7 @@ class UserSessionsController < ApplicationController
   def show
     @user_session = current_user_session
     @user_session ||= UserSession.new
+    @user_session.token = form_authenticity_token
     show! do |success|
       success.json {render :json => @user_session.to_json}
     end
@@ -21,6 +22,8 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     @user_session.token = form_authenticity_token
-    create!
+    create! do |success|
+      success.json {render :json => @user_session.to_json}
+    end
   end
 end
