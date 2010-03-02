@@ -7,6 +7,7 @@
       <td>Parent</td>
       <td>User name</td>
       <td>Position</td>
+      <td>CType</td>
       <td></td>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
         <td><%= bok.parent.title if bok.parent%></td>
         <td><%= bok.user_name %></td>
         <td><%= bok.position %></td>
+        <td><%= bok.content_type %></td>
         <td>
           <%= link_to 'Edit', edit_bok_path(bok) %>
           <%= link_to 'Delete', bok_path(bok), :method => :delete %>

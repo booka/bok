@@ -1,0 +1,25 @@
+
+@import "variables";
+
+.bk-Navigation {
+    width: 100%; overflow: hidden;
+    height: 100%;
+    background-color: white;
+}
+.bk-Navigation a{
+    display: block; float: left;
+    margin: 7px 0 0 10px;
+    opacity: 0.8; border-bottom: 3px solid white;
+}
+.bk-Navigation a:hover { opacity: 1; border-bottom: 5px solid #efefef; }
+.bk-Navigation .social a {float: right;}
+
+.bk-Navigation .info {background-color: white; padding: 5px 0; font-size: @font-small;
+      font-family: @sans;}
+.bk-Navigation .user {display: block; float: right; color: gray;}
+.bk-Navigation .project {display: block; float: left; color: gray;}
+.bk-Navigation .place {font-size: 150%; font-family: @serif; clear: both; padding: 5px 0;}
+.bk-Navigation .message {
+    color: @azul; text-align: center; padding: 3px 0;
+    background-color: @azulclaro;
+         -moz-border-radius: 3px;}

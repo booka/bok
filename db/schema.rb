@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(:version => 20091206184607) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
+    t.string   "login"
+    t.string   "rol",               :default => "user"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.integer  "login_count"
+    t.datetime "last_request_at"
+    t.datetime "last_login_at"
+    t.datetime "current_login_at"
+    t.string   "last_login_ip"
+    t.string   "current_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -7,61 +7,55 @@
 }
 div.Expansible:hover {background-color: @azulclaro;}
 
-.Form {
-    font-family: sans;
-    background-color: @azul;
-    padding: 0.5em 0 0 0;
-    margin: 1em 0;
-    width: 100%;
+.bk-Form {
     overflow: hidden;
-    font-size: 75%;
-}
-
-.Form .FormRow {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    margin: 3px 1em;
-}
-.Form .FormRow.Actions {
-    position: relative;
-    background-color: @grisclaro;
-    padding: 1em 1em 1em 0;
-    margin: 3px 0 0 0;
-}
-
-.Form .FormRow .Action {
-    margin: 0 1em 0 0;
-    .action;
-}
-
-.Form .FormLabel {
-    display: block;
     color: white;
+    font-family: @sans;
+    background-color: @azul;
+
 }
+
+.bk-Form .fields {
+    padding: 10px;
+}
+
+.bk-Form p {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 3px 0;
+}
+.bk-Form h1 {
+    font-size: 150%;
+    margin: 5px 0;
+    border-bottom: 1px solid @azulclaro;
+}
+
+.bk-Form .actions {
+    width: 100%; overflow: hidden; position: relative;
+    padding: 5px 0px 5px 5px;
+    margin: 5px 0 0 0;
+    background-color: @grisclaro;
+}
+.bk-Form .actions a {
+    color: black;
+    background-color: @azulclaro;
+    .button;
+}
+.bk-Form .actions a {color: white; background-color: @azul;}
+
 
 textarea {
     border: 1px solid white;
     padding: 2px;
+    width: 100%;
 }
 
 
-.Form input[type=text], .Form .TextArea {
+.bk-Form input[type=text], .bk-Form input[type=password], .bk-Form .TextArea {
     display: block;
     border: 1px solid white;
+    width: 100%;
     padding: 2px;
     color: black;
-    width: 15em;
-}
-
-.Form .Action {
-    display: block;
-    float: left;
-    cursor: pointer;
-    padding: 0.2em 1em;
-    margin: 1px 0 0 3px;
-    color: white;
-    background-color: azul;
-    color: white;
-    -moz-border-radius: 0.5em;
 }

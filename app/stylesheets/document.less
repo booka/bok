@@ -47,18 +47,29 @@
 
 
 /** CLIPS **/
-.bk-Clip {
+.bk-Bok {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    margin: 3px 0;
-    padding: 2px 0;
+    margin: 2px 0;
+    padding: 4px 0;
 }
 
-div.bk-Clip:hover, .bk-Clip.active {
-    border-top: 1px solid @azul;
-    border-bottom: 1px solid @azul;
+.bk-Bok.active {
+    padding: 0;
 }
-div.bk-Clip.editor:hover {
+
+.bk-Bok .body {margin: 1px;}
+
+.bk-Bok .slot {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 4px;
+    background-color: @azulclaro;
+}
+.bk-Bok a.slot:hover {background-color: @azul;}
+
+div.bk-Bok.editor:hover {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
@@ -75,12 +86,6 @@ div.bk-Clip.editor:hover {
     .action;
 }
 
-.bk-Slot {
-    width: 100%;
-    margin: -2px 0;
-    height: 3px;
-    background-color: @azulclaro;
-}
 
 
 .bk-ClipEditor {
@@ -88,7 +93,10 @@ div.bk-Clip.editor:hover {
     margin: 10px 0;
     background-color: @azulclaro;
     border: 1px solid @azul;
+    font-family: @sans;
 }
+
+.bk-ClipEditor label { display: block; margin-top: 3px; font-size: @font-small;}
 
 .bk-ClipEditor .actions {
     padding-top: 10px;
@@ -99,3 +107,8 @@ div.bk-Clip.editor:hover {
 .bk-ClipEditor .actions a {
     .action;
 }
+
+/** CONTENT **/
+.bk-Bok .body .Document {text-align: center;}
+.bk-Bok .body .Document h1 {font-size: 150%;}
+.bk-Bok .body .Document p {font-style: italic;}

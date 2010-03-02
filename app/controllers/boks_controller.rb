@@ -5,7 +5,7 @@ class BoksController < ApplicationController
   def index
     @boks = Bok.search(params[:search]).all
     index! do |format|
-      format.json { render_json(nil, @boks)}
+      format.json { render :json => BokResponse.new(nil, @boks).to_json}
     end
   end
 
@@ -13,29 +13,34 @@ class BoksController < ApplicationController
     @bok = Bok.find(params[:id])
     @boks = @bok.children
     show! do |format|
-      format.json { render_json(@bok, @boks)}
+      format.json { render :json => BokResponse.new(@bok, @boks).to_json}
     end
   end
 
   def create
     create! do |format|
-      update_position(@bok)
-      format.json { render_json(@bok, @boks)}
+      response = BokResponse.new(@bok, nil)
+      update_position(@bok, response)
+      format.json { render :json => response.to_json}
     end
   end
 
   def update
     request.format = params[:format] unless params[:format].empty?
     update! do |format|
-      update_position(@bok)
-      format.json { render_json(@bok, @bok.children)}
+      response = BokResponse.new(@bok, nil)
+      update_position(@bok, response)
+      format.json { render :json => response.to_json}
     end
   end
 
   private
-  def update_position(bok)
+  def update_position(bok, response)
     new_position = params[:bok][:position]
-    bok.insert_at(new_position) unless new_position.blank?
+    unless new_position.blank?
+      bok.insert_at(new_position) 
+      response.updated = bok.lower_sibilings
+    end
   end
 
 end

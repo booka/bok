@@ -7,13 +7,7 @@ html {
     font-family: @sans;  
 }
 
-.bk-Navigation {
-    width: 100%; overflow: hidden;
-    background-color: white; 
-}
-.bk-Navigation .bk-Anchor{ opacity: 0.8; border-bottom: 3px solid white;}
-.bk-Navigation a.bk-Anchor:hover { opacity: 1; border-bottom: 5px solid #efefef; }
-   
+
 .bk-ProjectList {
     background-color: @azul;
 } 
@@ -45,7 +39,9 @@ html {
 }
 .bk-ProjectList a.Project:hover {color: black; background-color: @azulclaro;}
 
+@import "workspace";
 @import "archives";
 @import "document";
 @import "calendar";
+@import "user";
 @import "forms";

@@ -7,9 +7,13 @@ class Bok < ActiveRecord::Base
 
   attr_reader :user_name
 
-  validates_presence_of :bok_type, :user_id
+  validates_presence_of :bok_type, :user_id, :position, :parent_id
 
   def user_name
     user ? user.name : ''
+  end
+
+  def lower_sibilings
+    Bok.all(:conditions => ['parent_id = ? AND position > ?', parent_id, position], :order => 'position')
   end
 end

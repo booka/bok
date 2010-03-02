@@ -1,23 +1,20 @@
-class UserSession
-  attr_reader :user_name, :user_id
+class UserSession < Authlogic::Session::Base
   attr_accessor :token
 
-  def initialize(params = {})
-    user = User.find_by_name(params[:name])
-    @user_name = user.name
-    @user_id = user.id
+  def name
+    self.user.name if self.user
+  end
+
+  def email
+    self.user.login if self.user
+  end
+
+  def user_id
+    self.user.id if self.user
   end
 
 
-  def errors
-    []
-  end
-
-  def new_record?
-    true
-  end
-  
-  def save
-    true
+  def to_json
+    [:name => name, :user_id => user_id, :email => email]
   end
 end

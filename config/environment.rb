@@ -10,12 +10,13 @@ Rails::Initializer.run do |config|
   config.gem 'inherited_resources', :source => 'http://gemcutter.org'
   config.gem 'formtastic'
   config.gem 'searchlogic'
+  config.gem "authlogic"
 
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
 
-    puts "Setup request logger."
-    config.middleware.use "RequestLogger"
+  puts "Setup request logger."
+  config.middleware.use "RequestLogger"
  
   config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"
 end
