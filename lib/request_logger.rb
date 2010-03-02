@@ -14,6 +14,7 @@ class RequestLogger
     @status, @headers, @response = @app.call(env)
     @stop = Time.now
     response(@start, @status, @headers, @response) if log
+    sleep(2) if log
     [@status, @headers, @response]
   end
 
