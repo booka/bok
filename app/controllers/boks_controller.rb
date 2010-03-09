@@ -18,7 +18,9 @@ class BoksController < ApplicationController
   end
 
   def create
-    create! do |format|
+    @bok = Bok.new(params[:bok])
+    @bok.save!
+    respond_to do |format|
       response = BokResponse.new(@bok, nil)
       update_position(@bok, response)
       format.json { render :json => response.to_json}

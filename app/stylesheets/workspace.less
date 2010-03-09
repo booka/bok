@@ -6,20 +6,29 @@
     height: 100%;
     background-color: white;
 }
-.bk-Navigation a{
+.bk-Navigation .work a, .bk-Navigation .social a{
     display: block; float: left;
-    margin: 7px 0 0 10px;
-    opacity: 0.8; border-bottom: 3px solid white;
+    margin: 7px 3px 0 3px;
+    border: 3px solid white;
+    -moz-border-radius: 3px;
 }
-.bk-Navigation a:hover { opacity: 1; border-bottom: 5px solid #efefef; }
+.bk-Navigation a:hover, .bk-Navigation a.active { opacity: 1; border: 3px solid @azulclaro; }
 .bk-Navigation .social a {float: right;}
 
-.bk-Navigation .info {background-color: white; padding: 5px 0; font-size: @font-small;
-      font-family: @sans;}
-.bk-Navigation .user {display: block; float: right; color: gray;}
-.bk-Navigation .project {display: block; float: left; color: gray;}
-.bk-Navigation .place {font-size: 150%; font-family: @serif; clear: both; padding: 5px 0;}
-.bk-Navigation .message {
-    color: @azul; text-align: center; padding: 3px 0;
+.p_message {
+    text-align: center; padding: 5px 10px 5px 10px;
     background-color: @azulclaro;
-         -moz-border-radius: 3px;}
+}
+
+.bk-Signals { font-family: @serif;}
+.bk-Signals .info {background-color: white; padding: 5px 0; font-size: @font-small;
+}
+.bk-Signals .user {
+    cursor: pointer; display: block;
+    float: right; color: @gris; text-align: right; font-size: @font-small;
+    font-family: @sans; .p_message; }
+.bk-Signals .user.active {color: @azul;}
+.bk-Signals .project { color: @gris;}
+.bk-Signals .place {font-size: 150%; }
+.bk-Signals .messages {font-family: @sans; .container;}
+.bk-Signals .message { float: left; margin-right: 10px; -moz-border-radius: 3px; color: @azul; .p_message;}

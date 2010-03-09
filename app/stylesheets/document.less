@@ -1,23 +1,24 @@
 @import "variables";
 
 .bk-Document {
-    width: 90%;
-    margin: 1em 5%; 
+    width: 100%;
+    margin: 1em 0;
 }
 
 .bk-Document .Page {
-    width: 80%;
-    margin: 0 10%;
+    width: 97%;
+    margin-right: 3%;
     min-height: 800px;
     border: 1px solid gray;
     background-color: white;
     font-family: "Garamon", serif;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .bk-Document .Page .Content{
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
 }
 
 .bk-Document .title {
@@ -58,7 +59,10 @@
     padding: 0;
 }
 
-.bk-Bok .body {margin: 1px;}
+.bk-Bok .body {
+      width: 80%; margin: 1px auto;
+      overflow: hidden;
+}
 
 .bk-Bok .slot {
     display: block;
@@ -76,7 +80,7 @@ div.bk-Bok.editor:hover {
 
 .bk-ClipActions {
     margin-top: 2px;
-    padding: 3px 0;
+    padding: 3px 20px;
     font-size: @font-small;
     background-color: @azulclaro;
     .container;
@@ -90,7 +94,7 @@ div.bk-Bok.editor:hover {
 
 .bk-ClipEditor {
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 10%;
     background-color: @azulclaro;
     border: 1px solid @azul;
     font-family: @sans;

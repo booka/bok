@@ -12,19 +12,20 @@
 ActiveRecord::Schema.define(:version => 20091206184607) do
 
   create_table "boks", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "parent_id"
+    t.integer  "user_id"
+    t.integer  "position"
     t.string   "title"
     t.string   "description"
     t.string   "bok_type"
     t.string   "content_type"
     t.string   "properties"
     t.text     "body"
-    t.integer  "parent_id"
-    t.integer  "position"
     t.string   "media_file_name"
     t.string   "media_content_type"
     t.integer  "media_file_size"
     t.datetime "media_updated_at"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
