@@ -19,7 +19,7 @@ site.save(false)
 ['Plataforma booka', 'Jardines interfaz', 'Arquitectura y género'].each do |name|
   project = Bok.create(:title => name, :bok_type => 'Project', :parent => site, :position => 1, :user_id => 1)
 
-  ['Call', 'Indice'].each do |type|
+  ['Call', 'Indice', 'Forum'].each do |type|
     Bok.create(:title => name, :bok_type => type, :parent => project, :project => project,
       :user_id => 1, :position => 1)
   end

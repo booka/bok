@@ -10,7 +10,7 @@
     background-color: white;
 }
 
-.bk-Browser .title {
+.bk-Browser .browserName {
     background-color: @grisclaro;
     font-size: 150%;
     padding: 3px 0 0 5px;
@@ -18,9 +18,22 @@
 }
 
 .bk-Browser .list {
+    width: 98%;
+    overflow: hidden;
+    margin: 0 0;
+    padding: 0;
     height: 100%;
     background-color: white;
 }
+
+div.bk-BrowserItem {
+    cursor: pointer;
+    border-bottom: 1px solid @grisclaro;
+    border-top: 1px solid white;
+    padding: 2px 5px;
+    .container;}
+div.bk-BrowserItem:hover, div.bk-BrowserItem.active {background-color: @grisclaro;}
+
 
 .bk-Browser .actions {
     background-color: @azulclaro;
@@ -31,16 +44,18 @@
     float: left;
     margin: 5px 3px 0 3px;
     opacity: 0.5;
+    border: 3px solid transparent;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
 }
 .bk-Browser .actions div.bk-Action:hover {
+    border-color: @azul;
+    background-color: @azul;
     opacity: 1;
 }
 
-div.bk-Pointer {
-    cursor: pointer; font-family: @serif;
-    border-bottom: 1px solid @grisclaro;
-    .container;}
-div.bk-Pointer:hover, div.bk-Pointer.active {background-color: @grisclaro;}
+
+div.bk-Pointer {font-family: @serif;}
 
 .bk-Pointer div {
     float: left;
